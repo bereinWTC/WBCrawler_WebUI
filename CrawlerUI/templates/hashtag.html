@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="col-md-12 column">
+			<table id = 'example' class="table table-striped table-hover dt-responsive">
+				<thead>
+					<tr>
+						<th>
+							rank
+						</th>
+						<th>
+							bloger
+						</th>
+						<th>
+							blogerurl
+						</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+
+					{%for post in posts%}
+					
+					<tr class = "success">
+						<td>
+						{{post.rank}}
+						</td>
+						
+						<td>
+						{{post.username}}
+						</td>
+						<td>
+						<a href="https://weibo.cn/u/{{post.userid}}">https://weibo.cn/u/{{post.userid}}</a>
+						</td>
+
+					</tr>
+					
+					{% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+{% endblock %}

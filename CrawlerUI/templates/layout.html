@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Weibo Crawler Simple</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../static/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href={{ url_for('static',filename='dist/css/bootstrap.min.css') }} rel="stylesheet">
+
+   <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+	<link href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" rel="stylesheet">
+
+
+	<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+
+	
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    
+<!--
+    <script src="http:////cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    
+	<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+	<script src="http://cdn.datatables.net/responsive/1.0.1/js/dataTables.responsive.min.js"></script>
+    <script src="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+	<script src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>
+
+           -->
+
+
+    <script src={{ url_for('static',filename='dist/js/jquery.min.js') }}></script>
+    <script src="../static/dist/js/bootstrap.min.js"></script>    
+    <script src={{ url_for('static',filename='dist/js/bootstrap.min.js') }}></script>
+    <script src={{url_for('static', filename='js/map.js')}} ></script>
+
+
+    <script src={{ url_for('static',filename='dist/js/jquery.dataTables.min.js') }}></script>
+    <script src={{ url_for('static',filename='dist/js/dataTables.responsive.min.js') }}></script>
+    <script src={{ url_for('static',filename='dist/js/dataTables.bootstrap.js') }}></script>
+    <script src={{ url_for('static',filename='dist/js/dataTables.bootstrap.min.js') }}></script>
+
+    <script src={{ url_for('static',filename='dist/js/bootstrap.min.js') }}></script>
+    <script src={{ url_for('static',filename='dist/js/highcharts.js') }}></script>
+    <!-- <script src="http://code.highcharts.com/highcharts.js"></script> -->
+    <script src={{url_for('static', filename='js/map.js')}} ></script> 
+  </head>
+<body>  
+<div align="center">
+<image src="../static/map/top.jpg" width="1140" preserveAspectRatio="none"></image>
+</div>
+
+
+<br><br/>
+<br><br/>
+<div class="col-md-9">			
+    	<form class="form-inline" method="post" action = "#" style="text-align:center">
+			<div class="form-group">
+			<label class="sr-only" for="exampleInputAmount"></label>
+			<div class="input-group">
+				<input type="text" name = "search" class="form-control" id="exampleInputID" placeholder="Please input your search content" data-provide="typeahead">
+			</div>
+			</div>
+			  <button type="submit" name = "go" class="btn btn-primary">Search</button>
+			  <button type="submit" name = "comment" class="btn btn-primary">Search Comment</button>
+			  <button type="submit" name = "hashtag" class="btn btn-primary">Search Event</button>
+			</form>
+	<br><br/>
+	<br><br/>
+	<div class="row clearfix">
+		<div class="col-md-9">
+			 <address> <strong>Group Members:</strong><br />Nan ZONG, Xinyu SHA, Yue YU and Tiance WU<br /> <abbr title="Phone">Location:</abbr>SJTU</address>
+		</div>
+	</div>
+	
+</div>
+			
+{% block content %}{% endblock %}
+		
+
+  </body>
+</html>
